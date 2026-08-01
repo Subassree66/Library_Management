@@ -1,0 +1,125 @@
+{
+ "actions": [
+  {
+   "action": "list/library",
+   "action_type": "Route",
+   "group": "lm",
+   "label": "library "
+  }
+ ],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "MEMBER-.###",
+ "creation": "2026-07-15 14:57:43.172196",
+ "default_email_template": "Welcome Member",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_information_section",
+  "member_name",
+  "phone",
+  "column_break_sa5s",
+  "email",
+  "address",
+  "membership_detaiols_section",
+  "membership_type",
+  "join_date",
+  "expiry_date",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "personal_information_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Information"
+  },
+  {
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Member Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "label": "Phone",
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_sa5s",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "membership_type",
+   "fieldtype": "Select",
+   "label": "Membership Type",
+   "options": "Student\nFaculty\nExternal"
+  },
+  {
+   "fieldname": "membership_detaiols_section",
+   "fieldtype": "Section Break",
+   "label": "Membership Detaiols"
+  },
+  {
+   "fieldname": "join_date",
+   "fieldtype": "Date",
+   "label": "Join Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInactive\nExpired"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-23 14:38:12.778162",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Member",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "member_name"
+}

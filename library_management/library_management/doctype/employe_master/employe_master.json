@@ -1,0 +1,469 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "EMP-.###",
+ "creation": "2026-07-16 12:55:22.211510",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_information_tab",
+  "employee_id",
+  "employee_name",
+  "profile_photoi",
+  "image_mpie",
+  "gender",
+  "date_of_birth",
+  "blood_group",
+  "email",
+  "phone_number",
+  "personal_website",
+  "biography",
+  "address_tab",
+  "department",
+  "designation",
+  "employee_type",
+  "joining_date",
+  "salary",
+  "past_experience",
+  "current_experience",
+  "working_hours",
+  "active",
+  "employee_code",
+  "employee_status",
+  "employee_skill",
+  "projects",
+  "education_tab",
+  "address_line_1",
+  "address_line_2",
+  "section_break_gxhx",
+  "city",
+  "pincode",
+  "column_break_biqt",
+  "state",
+  "country",
+  "documents_tab",
+  "resume",
+  "aadhar",
+  "pan",
+  "signature",
+  "notes",
+  "markdown_notes",
+  "bank_details_tab",
+  "bank_name",
+  "account_number",
+  "ifsc_code",
+  "upi_id",
+  "performance_tab",
+  "performance_rating",
+  "task_completion_rate",
+  "column_break_hihd",
+  "total_projects_completed",
+  "performance_status_color",
+  "section_break_ckyj",
+  "work_location",
+  "system_tab",
+  "system_password",
+  "json_configuration",
+  "system_preview",
+  "internal_notes",
+  "reference_doctype",
+  "reference_document"
+ ],
+ "fields": [
+  {
+   "fieldname": "personal_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Personal Information"
+  },
+  {
+   "description": "Enter your Employee Id",
+   "fieldname": "employee_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee ID",
+   "placeholder": "Ex : emp001",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Email",
+   "options": "Email",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date Of Birth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address_tab",
+   "fieldtype": "Tab Break",
+   "label": "Employement Details"
+  },
+  {
+   "fieldname": "education_tab",
+   "fieldtype": "Tab Break",
+   "label": "Address"
+  },
+  {
+   "bold": 1,
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "profile_photoi",
+   "fieldtype": "Attach Image",
+   "in_preview": 1,
+   "label": "Profile Photo"
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Select",
+   "label": "Blood Group",
+   "options": "A+\nA-\nB+\nB-\nAB+\nAB-\nO+\nO-"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number",
+   "options": "Phone",
+   "placeholder": "9876543210",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "personal_website",
+   "fieldtype": "Data",
+   "label": "Personal website",
+   "options": "URL"
+  },
+  {
+   "description": "A small Biography about you\n",
+   "fieldname": "biography",
+   "fieldtype": "Small Text",
+   "label": "Biography"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Department",
+   "not_nullable": 1,
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "reqd": 1
+  },
+  {
+   "default": "Full-time",
+   "fieldname": "employee_type",
+   "fieldtype": "Select",
+   "label": "Employee Type",
+   "options": "Full-time\nPart-time\nContract\nIntern\nProbation"
+  },
+  {
+   "fieldname": "joining_date",
+   "fieldtype": "Date",
+   "label": "Joining Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "salary",
+   "fieldtype": "Currency",
+   "label": "Salary"
+  },
+  {
+   "fieldname": "past_experience",
+   "fieldtype": "Float",
+   "label": "Past Experience"
+  },
+  {
+   "fieldname": "current_experience",
+   "fieldtype": "Float",
+   "label": "Current Experience",
+   "read_only": 1
+  },
+  {
+   "fieldname": "working_hours",
+   "fieldtype": "Duration",
+   "label": "Working Hours"
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "fieldname": "employee_code",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Employee Code"
+  },
+  {
+   "default": "Active",
+   "fieldname": "employee_status",
+   "fieldtype": "Select",
+   "label": "Employee Status",
+   "options": "Active\nInactive\nSuspended\nResigned"
+  },
+  {
+   "fieldname": "address_line_1",
+   "fieldtype": "Data",
+   "label": "Address line 1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address_line_2",
+   "fieldtype": "Data",
+   "label": "Address line 2"
+  },
+  {
+   "fieldname": "section_break_gxhx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pincode",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_biqt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "default": "India",
+   "fieldname": "country",
+   "fieldtype": "Autocomplete",
+   "label": "Country"
+  },
+  {
+   "fieldname": "documents_tab",
+   "fieldtype": "Tab Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "resume",
+   "fieldtype": "Attach",
+   "label": "Resume",
+   "reqd": 1
+  },
+  {
+   "fieldname": "aadhar",
+   "fieldtype": "Attach",
+   "label": "Aadhar",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pan",
+   "fieldtype": "Attach",
+   "label": "PAN",
+   "reqd": 1
+  },
+  {
+   "default": "### Previous Job Summary\n* **Company:** \n* **Role:** \n* **Key Achievements:**",
+   "fieldname": "signature",
+   "fieldtype": "Signature",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "markdown_notes",
+   "fieldtype": "Markdown Editor",
+   "label": "Markdown Notes"
+  },
+  {
+   "fieldname": "bank_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Bank Details"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "account_number",
+   "fieldtype": "Data",
+   "label": "Account Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "ifsc_code",
+   "fieldtype": "Data",
+   "label": "IFSC Code",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "upi_id",
+   "fieldtype": "Data",
+   "label": "UPI ID"
+  },
+  {
+   "fieldname": "performance_tab",
+   "fieldtype": "Tab Break",
+   "label": "Performance"
+  },
+  {
+   "fieldname": "performance_rating",
+   "fieldtype": "Rating",
+   "label": "Performance rating"
+  },
+  {
+   "fieldname": "task_completion_rate",
+   "fieldtype": "Percent",
+   "label": "Task Completion rate"
+  },
+  {
+   "fieldname": "column_break_hihd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_projects_completed",
+   "fieldtype": "Int",
+   "label": "Total Projects Completed"
+  },
+  {
+   "fieldname": "performance_status_color",
+   "fieldtype": "Color",
+   "label": "Performance Status Color"
+  },
+  {
+   "fieldname": "section_break_ckyj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "work_location",
+   "fieldtype": "Geolocation",
+   "label": "Work Location"
+  },
+  {
+   "fieldname": "system_tab",
+   "fieldtype": "Tab Break",
+   "label": "System"
+  },
+  {
+   "fieldname": "system_password",
+   "fieldtype": "Password",
+   "label": "System Password",
+   "reqd": 1
+  },
+  {
+   "fieldname": "json_configuration",
+   "fieldtype": "JSON",
+   "hidden": 1,
+   "label": "JSON Configuration"
+  },
+  {
+   "fieldname": "system_preview",
+   "fieldtype": "HTML",
+   "label": "System Preview",
+   "read_only": 1
+  },
+  {
+   "fieldname": "internal_notes",
+   "fieldtype": "Long Text",
+   "hidden": 1,
+   "label": "Internal Notes"
+  },
+  {
+   "fieldname": "employee_skill",
+   "fieldtype": "Table",
+   "label": "Employee Skill",
+   "options": "Employee Skills"
+  },
+  {
+   "fieldname": "projects",
+   "fieldtype": "Table MultiSelect",
+   "label": "Projects",
+   "options": "Employee Project"
+  },
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "label": "Reference Doctype",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "reference_document",
+   "fieldtype": "Dynamic Link",
+   "label": "Reference Document",
+   "options": "reference_doctype"
+  },
+  {
+   "fieldname": "image_mpie",
+   "fieldtype": "Image",
+   "options": "profile_photoi"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-22 17:27:37.372834",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Employe Master",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_seen": 1
+}

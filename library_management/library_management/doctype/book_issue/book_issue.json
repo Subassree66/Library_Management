@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "BOOK_ISSUE-.###",
+ "creation": "2026-07-15 14:43:26.966486",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_if4v",
+  "member",
+  "member_email",
+  "column_break_ikg3",
+  "book",
+  "member_phone",
+  "issue_dates_section",
+  "issue_date",
+  "return_date",
+  "status_section",
+  "returned",
+  "late_fee",
+  "fine_reason",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_if4v",
+   "fieldtype": "Section Break",
+   "label": "Issue Information"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Book Issue",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "label": "Member",
+   "options": "Member"
+  },
+  {
+   "fieldname": "column_break_ikg3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "book",
+   "fieldtype": "Link",
+   "label": "Book",
+   "options": "Book"
+  },
+  {
+   "fieldname": "issue_dates_section",
+   "fieldtype": "Section Break",
+   "label": "Issue Dates"
+  },
+  {
+   "fieldname": "issue_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Issue Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "return_date",
+   "fieldtype": "Date",
+   "label": "Return Date"
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Return Details"
+  },
+  {
+   "depends_on": "eval:doc.returned",
+   "fieldname": "late_fee",
+   "fieldtype": "Currency",
+   "label": "Late Fee"
+  },
+  {
+   "depends_on": "eval:doc.returned",
+   "fieldname": "fine_reason",
+   "fieldtype": "Small Text",
+   "label": "Fine Reason"
+  },
+  {
+   "fetch_from": "member.emial",
+   "fetch_if_empty": 1,
+   "fieldname": "member_email",
+   "fieldtype": "Data",
+   "label": "Member Email",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "member.phone",
+   "fetch_if_empty": 1,
+   "fieldname": "member_phone",
+   "fieldtype": "Phone",
+   "label": "Member Phone"
+  },
+  {
+   "default": "0",
+   "fieldname": "returned",
+   "fieldtype": "Check",
+   "label": "Returned"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-07-21 15:34:04.333590",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Book Issue",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

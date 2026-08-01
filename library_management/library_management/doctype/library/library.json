@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "LIBRARY-.###",
+ "creation": "2026-07-15 14:27:01.021057",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "library_information_section",
+  "library_name",
+  "library_email",
+  "library_logo",
+  "library_phone",
+  "website",
+  "library_rules_section",
+  "max_books_allowed",
+  "fine_per_day",
+  "opening_time",
+  "column_break_naur",
+  "closing_time",
+  "active",
+  "established_date",
+  "working_hours_section",
+  "library_opening_time",
+  "library_closing_time",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "library_information_section",
+   "fieldtype": "Section Break",
+   "label": "Library Information"
+  },
+  {
+   "fieldname": "library_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Library Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "library_email",
+   "fieldtype": "Data",
+   "label": "Library email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "max_books_allowed",
+   "fieldtype": "Int",
+   "label": "Max Books Allowed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fine_per_day",
+   "fieldtype": "Currency",
+   "label": "Fine Per Day",
+   "reqd": 1
+  },
+  {
+   "fieldname": "library_opening_time",
+   "fieldtype": "Text Editor",
+   "label": "About Library"
+  },
+  {
+   "fieldname": "library_closing_time",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "library_rules_section",
+   "fieldtype": "Section Break",
+   "label": "Library Settings"
+  },
+  {
+   "fieldname": "working_hours_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Details"
+  },
+  {
+   "fieldname": "library_logo",
+   "fieldtype": "Attach Image",
+   "label": "Library Logo"
+  },
+  {
+   "fieldname": "library_phone",
+   "fieldtype": "Phone",
+   "label": "Library Phone"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "opening_time",
+   "fieldtype": "Time",
+   "label": "Opening Time"
+  },
+  {
+   "fieldname": "column_break_naur",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "closing_time",
+   "fieldtype": "Time",
+   "label": "Closing Time"
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "fieldname": "established_date",
+   "fieldtype": "Date",
+   "label": "Established Date"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Long Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-07-16 11:12:32.910076",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Library",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
