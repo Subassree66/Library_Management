@@ -12,9 +12,3 @@ def library_signup(full_name, email_address, phone_number=None, membership_type=
     frappe.db.commit()
 
     return "Signup Request Submitted Successfully!"
-import frappe
-
-@frappe.whitelist()
-def test_only_for():
-    frappe.only_for("System Manager")
-    return "Access granted!"

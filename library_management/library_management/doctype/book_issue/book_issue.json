@@ -89,11 +89,12 @@
    "label": "Fine Reason"
   },
   {
-   "fetch_from": "member.emial",
+   "fetch_from": "member.email",
    "fetch_if_empty": 1,
    "fieldname": "member_email",
    "fieldtype": "Data",
    "label": "Member Email",
+   "options": "Email",
    "read_only": 1
   },
   {
@@ -114,7 +115,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-07-21 15:34:04.333590",
+ "modified": "2026-08-04 16:29:45.458280",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Book Issue",

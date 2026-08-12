@@ -7,15 +7,83 @@ app_license = "mit"
 
 
 # Apps
-
-app_include_js="custom_desk.bundle.js"
-# ------------------
-doc_events = {
-    "ToDo":{
-        "validate":"library_management.api.custom_logic.on_todo_validate"
-    }
-}
+# web_include_js = "/assets/library_management/js/portal_script.js"
+# web_include_css = "/assets/library_management/css/portal_style.css"
+# #app_include_js = ["custom_desk.bundle.js", "/assets/library_management/js/second_script.js"]
+# app_include_css = "/assets/library_management/css/custom_style.css"
+# webform_include_js = {"ToDo": "public/js/custom_todo.js"}
+# webform_include_css = {"ToDo": "public/css/custom_todo.css"}
+# page_js = {"backups": "public/js/custom_background_jobs.js"}
+# sounds = [
+#     {"name": "ping", "src": "/assets/library_management/sounds/ping.mp3", "volume": 0.2}
+# ]
+# before_migrate = "library_management.migrate.before_migrate"
+# after_migrate = "library_management.migrate.after_migrate"
+# # ------------------
+# doc_events = {
+#     "ToDo":{
+#         "validate":"library_management.api.custom_logic.on_todo_validate"
+#     },
+#     "Book Issue": {
+#         "before_insert": "library_management.overrides.book_issue.set_due_date",
+#         "on_submit": "library_management.overrides.book_issue.mark_book_unavailable",
+#         "on_cancel": "library_management.overrides.book_issue.mark_book_available",
+#     }
+# }
+# before_tests = "library_management.tests.before_tests"
+# user_data_fields = [
+#     {
+#         "doctype": "Member",
+#         "filter_by": "email",
+#     },
+#     {
+#         "doctype": "Book Issue",
+#         "filter_by": "member_email",
+#         "redact_fields": ["member_email", "member_phone"],
+#         "partial": True,
+#     },
+# ]
+#signup_form_template = "www/library_signup.html"
+#signup_form_template = "library_management/templates/signup.html"
+#app_include_js = "/assets/library_management/js/signup.js"
+#web_include_js = "/assets/library_management/js/signup.js"
+#notification_config = "library_management.notifications.get_notification_config"
+#auto_cancel_exempted_doctypes = ["Doc2"]
+#website_context = {
+#     "favicon": "/assets/your_app/images/favicon.png",
+#     "site_tagline": "Building the Future of ERP"
+#}
+# update_website_context = "library_management.overrides.website_context.modify_context"
+# extend_website_page_controller_context = {
+#     "frappe.www.404": "library_management.pages.context_404"
+# }
+# extend_website_page_controller_context = {
+#     "frappe.www.404": "library_management.pages.context_404"
+# }
 # required_apps = []
+# default_mail_footer = """
+# <hr>
+# <div>
+#     Sent via <b>Library Management System</b>
+# </div>
+# """
+# user_data_fields = [
+#     {
+#         "doctype": "Member",
+#         "filter_by": "email",
+#         "redact_fields": [
+#             "phone"
+#         ]
+#     },
+#     {
+#         "doctype": "Book Issue",
+#         "filter_by": "member_email"
+#     }
+# ]
+# permission_query_conditions = {
+#     "Book Issue": "library_management.permissions.book_issue_query"
+# }
+braintree_success_page = "library_management.integrations.braintree_success_page"
 
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
@@ -177,7 +245,10 @@ doc_events = {
 # Testing
 # -------
 
-# before_tests = "library_management.install.before_tests"
+# Testing
+# -------
+
+
 
 # Extend DocType Class
 # ------------------------------
