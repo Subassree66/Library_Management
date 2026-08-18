@@ -1,33 +1,38 @@
-### Library Management
+# LMS Frappe Assignments
 
-Library Management System
+## Assignment 2: python-api-documentation Assignment
 
-### Installation
+### Files
+- library_management/api/__init__.py
+- screenshots/postman_api_test.png
 
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
+### API Method
+- update_books_using_apis()
 
-```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch version-16
-bench install-app library_management
-```
+### API Endpoint
+- /api/method/library_management.api.update_books_using_apis
 
-### Contributing
+### APIs Used
+- Whitelisted API using `@frappe.whitelist()`
+- Query Builder
+- Document API using `frappe.get_doc()`
+- Database API using `frappe.db.set_value()`
 
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
+### Query Builder
+- Joined `Book` and `Author` DocTypes
+- Retrieved up to 5 records
 
-```bash
-cd apps/library_management
-pre-commit install
-```
+### Document API
+- Fetched one Book using `frappe.get_doc()`
+- Updated the Book status
+- Saved the document using `.save()`
 
-Pre-commit is configured to use the following tools for checking and formatting your code:
+### Database API
+- Updated the status of all retrieved Books using `frappe.db.set_value()`
 
-- ruff
-- eslint
-- prettier
-- pyupgrade
+### Postman Testing
+- API tested successfully using Postman
+- Successful JSON response received from the API endpoint
 
-### License
-
-mit
+### Screenshot
+https://drive.google.com/file/d/1BTHblkZv9QiTCY_G8vrFS25yHxovPKeA/view?usp=sharing
