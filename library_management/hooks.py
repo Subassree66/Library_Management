@@ -5,8 +5,13 @@ app_description = "Library Management System"
 app_email = "faris@example.com"
 app_license = "mit"
 
+from library_management.transaction_hooks import register_transaction_hooks
 
-# Apps
+register_transaction_hooks()
+
+
+# Your existing hooks below
+
 # web_include_js = "/assets/library_management/js/portal_script.js"
 # web_include_css = "/assets/library_management/css/portal_style.css"
 # #app_include_js = ["custom_desk.bundle.js", "/assets/library_management/js/second_script.js"]

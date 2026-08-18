@@ -1,22 +1,42 @@
-# Copyright (c) 2026, Faris Ansari and Contributors
-# See license.txt
-
-# import frappe
+import frappe
 from frappe.tests import IntegrationTestCase
 
 
-# On IntegrationTestCase, the doctype test records and all
-# link-field test record dependencies are recursively loaded
-# Use these module variables to add/remove to/from that list
-EXTRA_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
-IGNORE_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
-
-
-
 class IntegrationTestBook(IntegrationTestCase):
-	"""
-	Integration tests for Book.
-	Use this class for testing interactions between multiple components.
-	"""
 
-	pass
+    def test_successful_transaction(self):
+        frappe.db.set_value(
+            "Book",
+            "BOOK-001",
+            "status",
+            "Issued"
+        )
+
+        status = frappe.db.get_value(
+            "Book",
+            "BOOK-001",
+            "status"
+        )
+
+        print("STATUS INSIDE TEST:", status)
+
+        self.assertEqual(status, "Issued")
+
+
+    def test_failed_transaction(self):
+        frappe.db.set_value(
+            "Book",
+            "BOOK-001",
+            "status",
+            "Issued"
+        )
+
+        status = frappe.db.get_value(
+            "Book",
+            "BOOK-001",
+            "status"
+        )
+
+        print("STATUS BEFORE FAILURE:", status)
+
+        raise Exception("Testing transaction rollback")
