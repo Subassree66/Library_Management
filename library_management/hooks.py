@@ -5,10 +5,14 @@ app_description = "Library Management System"
 app_email = "faris@example.com"
 app_license = "mit"
 
-from library_management.transaction_hooks import register_transaction_hooks
+# from library_management.transaction_hooks import register_transaction_hooks
 
-register_transaction_hooks()
-
+# register_transaction_hooks()
+scheduler_events = {
+	"daily": [
+		"library_management.tasks.daily_maintenance"
+	]
+}
 
 # Your existing hooks below
 
