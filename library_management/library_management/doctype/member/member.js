@@ -6,3 +6,10 @@
 
 // 	},
 // });
+frappe.ui.form.on('Member', {
+    onload: function(frm) {
+        frappe.realtime.on('book_available', (data) => {
+            frappe.msgprint(`📚 The book "${data.book}" is now available!`);
+        });
+    }
+});

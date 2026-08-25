@@ -14,6 +14,10 @@ scheduler_events = {
 	]
 }
 
+# your_app/hooks.py
+
+sqlite_search = ['library_management.search.LibrarySearch']
+
 # Your existing hooks below
 
 # web_include_js = "/assets/library_management/js/portal_script.js"

@@ -16,7 +16,8 @@
   "publication_details_section",
   "published_date",
   "availability_section",
-  "status"
+  "status",
+  "reviews"
  ],
  "fields": [
   {
@@ -76,12 +77,18 @@
   {
    "fieldname": "column_break_mxii",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reviews",
+   "fieldtype": "Table",
+   "label": "reviews",
+   "options": "Book Review"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-12 12:18:36.669304",
+ "modified": "2026-08-24 12:23:07.937421",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Book",
