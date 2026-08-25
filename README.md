@@ -1,5 +1,30 @@
 # LMS Frappe Assignments
 
+## Assignment 4: python-api-utilities Assignment
+### Files
+- library_management/api/todo_utils.py
+### API Method
+- get_recent_todos_with_owner_email()
+### API Endpoint
+- /api/method/library_management.api.todo_utils.get_recent_todos_with_owner_email
+### APIs Used
+- Whitelisted API using `@frappe.whitelist()`
+- Secure List API using `frappe.get_list()`
+- Database API using `frappe.db.get_value()`
+- Utility API using `frappe.utils.now()`
+### Secure Fetching
+- Fetched 5 most recent `ToDo` records using `frappe.get_list()`
+- Selected only required fields: `name`, `description`, `owner`, `creation`
+### Optimization
+- Fetched owner's email for each ToDo using `frappe.db.get_value()`
+### Context-Aware Time
+- Retrieved server timestamp using `frappe.utils.now()`
+### Testing
+- Tested via browser while logged in
+- Verified instant JSON response via REST API Handler
+### Screenshot
+https://drive.google.com/file/d/1kMiNgslkAD-TbMtHegpx_EsQ9ZW2oUoz/view?usp=sharing
+
 ## Assignment 2: python-api-documentation Assignment
 ### Files
 - library_management/api/__init__.py
