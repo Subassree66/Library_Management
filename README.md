@@ -1,5 +1,27 @@
 # LMS Frappe Assignments
 
+## Assignment 1: js-frappecall Assignment
+### Files
+- library_management/api.py/create_task
+- library_management/library_management/doctype/book/book.js
+
+### API Method
+- create_task()
+
+### API Endpoint
+- /api/method/library_management.api.create_task
+
+### APIs Used
+- `@frappe.whitelist()`
+- `frappe.new_doc()`
+- `.save()`
+- `frappe.ui.Dialog()`
+- `frappe.call()`
+- `frappe.msgprint()`
+
+### Screenshot
+https://drive.google.com/file/d/1ul0L1FDmAphywwD_O8rmp-wZ_UembDWw/view?usp=sharing
+
 ## Assignment 5: python-api-utilities Assignment
 ### Files
 - library_management/api/todo_utils.py
