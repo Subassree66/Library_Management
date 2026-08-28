@@ -94,12 +94,31 @@
 #         "message": "Books fetched and updated successfully",
 #         "data": books
 #     }
-import frappe
-from Library_managemnt.search import LibrarySearch
+# import frappe
+# from Library_managemnt.search import LibrarySearch
 
+
+# @frappe.whitelist()
+# def search_books(query, filters=None):
+#     search = LibrarySearch()
+#     result = search.search(query, filters=filters)
+#     return result
+
+
+# import frappe
+
+# @frappe.whitelist()
+# def book_action():
+#     frappe.msgprint("Python method executed!")
+#     return "Success"
+
+import frappe
 
 @frappe.whitelist()
-def search_books(query, filters=None):
-    search = LibrarySearch()
-    result = search.search(query, filters=filters)
-    return result
+def create_task(task_subject):
+    task = frappe.new_doc("Task")
+    task.subject = task_subject
+    task.save()
+
+    return task.name
+
