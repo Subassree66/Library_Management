@@ -1,95 +1,167 @@
 # LMS Frappe Assignments
 
-## Assignment 1: js-frappecall Assignment
-### Files
-- library_management/api.py/create_task
-- library_management/library_management/doctype/book/book.js
+## Bench CLI Site Management Assignment
 
-### API Method
-- create_task()
+### Assignment
 
-### API Endpoint
-- /api/method/library_management.api.create_task
+Created a custom Bench CLI command in the `library_management` app.
 
-### APIs Used
-- `@frappe.whitelist()`
-- `frappe.new_doc()`
-- `.save()`
-- `frappe.ui.Dialog()`
-- `frappe.call()`
-- `frappe.msgprint()`
+### File
+
+`library_management/commands.py`
+
+### Command
+
+`bench hello-app`
 
 ### Screenshot
+
+https://drive.google.com/file/d/1aAmW2O7s8x3PcVet6r3BBEhn5DHzR1Sr/view?usp=sharing
+
+## Assignment 1: js-frappecall Assignment
+
+### Files
+
+* library_management/api.py/create_task
+* library_management/library_management/doctype/book/book.js
+
+### API Method
+
+* create_task()
+
+### API Endpoint
+
+* /api/method/library_management.api.create_task
+
+### APIs Used
+
+* `@frappe.whitelist()`
+* `frappe.new_doc()`
+* `.save()`
+* `frappe.ui.Dialog()`
+* `frappe.call()`
+* `frappe.msgprint()`
+
+### Screenshot
+
 https://drive.google.com/file/d/1ul0L1FDmAphywwD_O8rmp-wZ_UembDWw/view?usp=sharing
 
 ## Assignment 5: python-api-utilities Assignment
+
 ### Files
-- library_management/api/todo_utils.py
+
+* library_management/api/todo_utils.py
+
 ### API Method
-- get_recent_todos_with_owner_email()
+
+* get_recent_todos_with_owner_email()
+
 ### API Endpoint
-- /api/method/library_management.api.todo_utils.get_recent_todos_with_owner_email
+
+* /api/method/library_management.api.todo_utils.get_recent_todos_with_owner_email
+
 ### APIs Used
-- Whitelisted API using `@frappe.whitelist()`
-- Secure List API using `frappe.get_list()`
-- Database API using `frappe.db.get_value()`
-- Utility API using `frappe.utils.now()`
+
+* Whitelisted API using `@frappe.whitelist()`
+* Secure List API using `frappe.get_list()`
+* Database API using `frappe.db.get_value()`
+* Utility API using `frappe.utils.now()`
+
 ### Secure Fetching
-- Fetched 5 most recent `ToDo` records using `frappe.get_list()`
-- Selected only required fields: `name`, `description`, `owner`, `creation`
+
+* Fetched 5 most recent `ToDo` records using `frappe.get_list()`
+* Selected only required fields: `name`, `description`, `owner`, `creation`
+
 ### Optimization
-- Fetched owner's email for each ToDo using `frappe.db.get_value()`
+
+* Fetched owner's email for each ToDo using `frappe.db.get_value()`
+
 ### Context-Aware Time
-- Retrieved server timestamp using `frappe.utils.now()`
+
+* Retrieved server timestamp using `frappe.utils.now()`
+
 ### Testing
-- Tested via browser while logged in
-- Verified instant JSON response via REST API Handler
+
+* Tested via browser while logged in
+* Verified instant JSON response via REST API Handler
+
 ### Screenshot
+
 https://drive.google.com/file/d/1kMiNgslkAD-TbMtHegpx_EsQ9ZW2oUoz/view?usp=sharing
 
 ## Assignment 2: python-api-documentation Assignment
+
 ### Files
-- library_management/api/__init__.py
-- screenshots/postman_api_test.png
+
+* library_management/api/**init**.py
+* screenshots/postman_api_test.png
+
 ### API Method
-- update_books_using_apis()
+
+* update_books_using_apis()
+
 ### API Endpoint
-- /api/method/library_management.api.update_books_using_apis
+
+* /api/method/library_management.api.update_books_using_apis
+
 ### APIs Used
-- Whitelisted API using `@frappe.whitelist()`
-- Query Builder
-- Document API using `frappe.get_doc()`
-- Database API using `frappe.db.set_value()`
+
+* Whitelisted API using `@frappe.whitelist()`
+* Query Builder
+* Document API using `frappe.get_doc()`
+* Database API using `frappe.db.set_value()`
+
 ### Query Builder
-- Joined `Book` and `Author` DocTypes
-- Retrieved up to 5 records
+
+* Joined `Book` and `Author` DocTypes
+* Retrieved up to 5 records
+
 ### Document API
-- Fetched one Book using `frappe.get_doc()`
-- Updated the Book status
-- Saved the document using `.save()`
+
+* Fetched one Book using `frappe.get_doc()`
+* Updated the Book status
+* Saved the document using `.save()`
+
 ### Database API
-- Updated the status of all retrieved Books using `frappe.db.set_value()`
+
+* Updated the status of all retrieved Books using `frappe.db.set_value()`
+
 ### Postman Testing
-- API tested successfully using Postman
-- Successful JSON response received from the API endpoint
+
+* API tested successfully using Postman
+* Successful JSON response received from the API endpoint
+
 ### Screenshot
+
 https://drive.google.com/file/d/1BTHblkZv9QiTCY_G8vrFS25yHxovPKeA/view?usp=sharing
 
 ## Assignment 3: python-api-background-jobs Assignment
+
 ### Files
-- library_management/tasks.py
-- library_management/hooks.py
+
+* library_management/tasks.py
+* library_management/hooks.py
+
 ### Scheduler Method
-- daily_maintenance()
+
+* daily_maintenance()
+
 ### Scheduler Configuration
-- Added `scheduler_events` dictionary in `hooks.py`
-- Configured `daily_maintenance` to run on a `daily` interval
+
+* Added `scheduler_events` dictionary in `hooks.py`
+* Configured `daily_maintenance` to run on a `daily` interval
+
 ### APIs Used
-- `frappe.log_error()` — logs a message confirming job execution
+
+* `frappe.log_error()` — logs a message confirming job execution
+
 ### Verification
-- Ran `bench migrate` to sync scheduler hooks to the database
-- Confirmed job registration under **Scheduled Job Type** doctype list
-- Method shown: `library_management.tasks.daily_maintenance`
-- Frequency: Daily
+
+* Ran `bench migrate` to sync scheduler hooks to the database
+* Confirmed job registration under **Scheduled Job Type** doctype list
+* Method shown: `library_management.tasks.daily_maintenance`
+* Frequency: Daily
+
 ### Screenshot
+
 https://drive.google.com/file/d/1TU-sJ-QRk7-ctFq152pyXvVUAqfKepR9/view?usp=sharing
