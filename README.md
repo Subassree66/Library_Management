@@ -1,5 +1,18 @@
 # LMS Frappe Assignments
 
+## Assignment Guide 1: Hooks, Fixtures & Client Script
+
+### Hooks
+
+**Path:**
+`library_management/hooks.py`
+
+### Fixtures
+
+**Path:**
+`library_management/fixtures/`
+
+
 ## Bench CLI Site Management Assignment
 
 ### Assignment
