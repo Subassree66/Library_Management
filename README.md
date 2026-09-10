@@ -1,11 +1,18 @@
 # LMS Frappe Assignments
 
+
+## Assignment Others :  Custom API endpoint 
+
+### API.py
+`library_management/api.py/limited_greeting`
+
+
 ## Assignment Guide 1: Hooks, Fixtures & Client Script
 
 ### Hooks
 
 **Path:**
-`library_management/hooks.py`
+`library_management/hooks.py/`
 
 ### Fixtures
 
