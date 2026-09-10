@@ -1,4 +1,12 @@
-# # import frappe
+import frappe
+from frappe.rate_limiter import rate_limit
+@frappe.whitelist(allow_guest=True)
+@rate_limit(5)
+def limited_greeting():
+    logger=frappe.logger()
+    logger.info("Endpoint Called")
+    frappe.response['message'] = 'Hello, Rate Limited World!'
+
 
 # # @frappe.whitelist(allow_guest=True)
 # # def library_signup(full_name, email_address, phone_number=None, membership_type=None):
