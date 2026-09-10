@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Book Report</h2>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>Report Filters</strong>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <strong>Status:</strong>
+                        <%= filters.status %>
+                    </p>
+                </div>
+            </div>
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% data.forEach(function(row) { %>
+                        <tr>
+                            <td><%= row.book_title %></td>
+                            <td><%= row.author %></td>
+                            <td><%= row.status %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

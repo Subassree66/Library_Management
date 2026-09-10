@@ -14,6 +14,8 @@ scheduler_events = {
 	]
 }
 
+
+fixtures=["Client Script"]
 # your_app/hooks.py
 
 sqlite_search = ['library_management.search.LibrarySearch']

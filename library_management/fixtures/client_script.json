@@ -1,0 +1,46 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "ToDo",
+  "enabled": 1,
+  "modified": "2026-08-01 16:41:44.738597",
+  "module": null,
+  "name": "todo_test_script",
+  "script": "frappe.ui.form.on('ToDo', {\r\n    onload: function(frm) {\r\n        frappe.msgprint(\"Client Script fired on form load!\");\r\n    },\r\n    after_save: function(frm) {\r\n        frappe.utils.play_sound(\"ping\");\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Braintree Payment Test",
+  "enabled": 1,
+  "modified": "2026-08-10 15:56:26.282169",
+  "module": null,
+  "name": "BrainTree Payment Test",
+  "script": "frappe.ui.form.on(\"Braintree Payment Test\", {\r\n    refresh(frm) {\r\n        frm.add_custom_button(\"Simulate Payment Success\", function() {\r\n            frappe.call({\r\n                method: \"library_management.integrations.test_braintree_success\",\r\n                args: {\r\n                    reference_doctype: frm.doc.reference_doctype,\r\n                    reference_docname: frm.doc.reference_docname\r\n                },\r\n                callback: function(r) {\r\n                    if (r.message) {\r\n                        frappe.msgprint(\"Redirecting to: \" + r.message);\r\n                        window.location.href = r.message;\r\n                    }\r\n                }\r\n            });\r\n        });\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Book",
+  "enabled": 0,
+  "modified": "2026-08-24 16:11:34.625540",
+  "module": "Library Management",
+  "name": "book_cs",
+  "script": "frappe.ui.form.on('Book', {\r\n    refresh(frm) {\r\n        frappe.show_alert({\r\n            message: 'Book Form Opened',\r\n            indicator: 'green'\r\n        });\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "User",
+  "enabled": 1,
+  "modified": "2026-09-10 16:17:07.872609",
+  "module": null,
+  "name": "assignment_guide1",
+  "script": "frappe.ui.form.on('User', {\n\trefresh(frm) {\n\t\tfrm.add_custom_button(\"Send Welcome Email\",function(){\n\t\t    frappe.msgprint(\"Email Sent\")\n\t\t},\"Actions\")\n\t}\n})",
+  "view": "Form"
+ }
+]
