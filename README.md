@@ -1,6 +1,17 @@
 # LMS Frappe Assignments
 
 
+## Assignment Guide 3: Article Doctype + Test class
+
+### Part-1
+article.py `library_management/www/article.py`
+article.html `library_management/www/article.html`
+
+### Part-2
+test class `library_management/tests/test_artice.py`
+
+
+
 ## Assignment Others :  Custom API endpoint 
 
 ### API.py
