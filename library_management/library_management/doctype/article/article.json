@@ -8,7 +8,9 @@
  "field_order": [
   "full_name",
   "email",
-  "enable"
+  "enable",
+  "title",
+  "status"
  ],
  "fields": [
   {
@@ -26,12 +28,23 @@
    "fieldtype": "Select",
    "label": "enable",
    "options": "yes\nno"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPublished"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-10 14:54:28.862043",
+ "modified": "2026-09-11 15:31:27.540887",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Article",
